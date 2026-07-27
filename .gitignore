@@ -1,10 +1,10 @@
 # Frontend
-Client(react)/template/node_modules/
-Client(react)/template/dist/
+Client/template/node_modules/
+Client/template/dist/
 
 # Backend
-server(express)/node_modules/
-server(express)/.env
+server/node_modules/
+server/.env
 
 # OS
 .DS_Store
