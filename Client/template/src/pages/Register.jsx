@@ -59,7 +59,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://jobportal-repo-7c7b.onrender.com/api/auth/register",
         form
       );
       login(res.data.user, res.data.token);

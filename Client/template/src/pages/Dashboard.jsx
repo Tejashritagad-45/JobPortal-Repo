@@ -12,8 +12,8 @@ const Dashboard = () => {
 
     useEffect(()=>{
         const url=user.role==="employer"
-        ? "http://localhost:5000/api/jobs/my/posted"
-        : "http://localhost:5000/api/applications/mine";
+        ? "https://jobportal-repo-7c7b.onrender.com/api/jobs/my/posted"
+        : "https://jobportal-repo-7c7b.onrender.com/api/applications/mine";
         axios.get(url,{headers:{Authorization:`Bearer ${token}`}})
         .then(res=>{setData(res.data);setLoading(false); console.log(res);
         })

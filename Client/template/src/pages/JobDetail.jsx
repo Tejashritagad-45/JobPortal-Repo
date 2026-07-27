@@ -15,7 +15,7 @@ const JobDetail = () => {
     const textareaRef=useRef(null);
 
     useEffect(()=>{
-        axios.get(`http://localhost:5000/api/jobs/${id}`)
+        axios.get(`https://jobportal-repo-7c7b.onrender.com/api/jobs/${id}`)
          .then(res=>setJob(res.data));
     },[id]);
 
@@ -23,7 +23,7 @@ const JobDetail = () => {
         const token=localStorage.getItem("token");
 
         try{
-            await axios.post("http://localhost:5000/api/applications", 
+            await axios.post("https://jobportal-repo-7c7b.onrender.com/api/applications", 
                 {jobId:id,coverLetter},
                 {headers:{Authorization:`Bearer ${token}`}}
             );
