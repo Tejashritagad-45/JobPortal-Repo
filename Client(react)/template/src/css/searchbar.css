@@ -1,0 +1,68 @@
+/* Search bar container */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Input fields */
+.search-bar input {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 14px 10px 38px; /* left padding for icon */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+
+  /* 🔍 Icon inside input */
+  background-image: url("https://cdn-icons-png.flaticon.com/512/622/622669.png");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 12px center;
+}
+
+/* Focus effect */
+.search-bar input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+}
+
+/* Select dropdown */
+.search-bar select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Select focus */
+.search-bar select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+}
+
+/* Hover */
+.search-bar input:hover,
+.search-bar select:hover {
+  border-color: #999;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

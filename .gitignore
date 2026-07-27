@@ -1,0 +1,11 @@
+# Frontend
+Client(react)/template/node_modules/
+Client(react)/template/dist/
+
+# Backend
+server(express)/node_modules/
+server(express)/.env
+
+# OS
+.DS_Store
+Thumbs.db
