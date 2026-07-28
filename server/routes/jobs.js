@@ -20,16 +20,8 @@ const Job = require("../models/Job");
     }
  });
 
- router.get("/:id",async (req,res)=>{
-    try{
-        const job=await Job.findById(req.params.id);
-        if(!job) return res.status(404).json({message:"Job not found"});
-        res.json(job);
-    }catch{
-        res.status(500).json({message:"Server error"})
-    }
-})
-
+ 
+ 
 
 
 router.get("/",async (req,res)=>{
@@ -50,5 +42,16 @@ router.get("/my/posted",verifyToken,async(req,res)=>{
         return {...job.toObject(),applicationCount:count};
     }));
     res.json(jobsWithCount);
+})
+
+
+ router.get("/:id",async (req,res)=>{
+    try{
+        const job=await Job.findById(req.params.id);
+        if(!job) return res.status(404).json({message:"Job not found"});
+        res.json(job);
+    }catch{
+        res.status(500).json({message:"Server error"})
+    }
 })
  module.exports=router;
